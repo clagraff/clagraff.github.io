@@ -1,0 +1,93 @@
+---
+---
+
+//
+// IMPORTS
+//
+
+@import "normalize";
+@import "variables";
+@import "simplegrid";
+
+// Syntax highlighting @import is at the bottom of this file
+
+/**************/
+/* BASE RULES */
+/**************/
+
+html, body {
+  font-family: 'Source Code Pro', monospace;
+}
+
+hr {
+  color: #000000 !important;
+  background-color: #000000 !important;
+  height: 4px !important;
+  clear: both;
+}
+
+.title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 3em;
+  float: left;
+  span.left {
+    margin-left: 1em;
+    font-size: 0.5em;
+  }
+  padding-bottom: 0.5em;
+}
+
+.contact {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 1.5em;
+  float: right;
+  text-align: right;
+  text-transform: uppercase;
+  nav a {
+    margin-right: 1em;
+  }
+  padding-bottom: 0.5em;
+}
+
+.company {
+  font-weight: 900;
+}
+
+.position {
+  font-style: italic;
+  font-size: 1.2em;
+}
+
+.company {
+  font-size: 1.2em;
+}
+
+.contact, .company, a {
+  color: #E91D63;
+  text-decoration: none;
+}
+
+.duration {
+  font-size: 0.9em;
+}
+
+.entry {
+  line-height: 1.5em;
+  margin-top: 2em;
+}
+
+li {
+  line-height: 1.4em;
+}
+
+a {
+  &:hover, &:active {
+    color: #2789F2;
+    text-decoration: underline;
+  }
+}
+
+// Settled on moving the import of syntax highlighting to the bottom of the CSS
+// ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
+@import "highlights";
+@import "svg-icons";

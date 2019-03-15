@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+
+    {% include meta.html %}
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto+Condensed|Source+Code+Pro" rel="stylesheet">
+
+    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+  </head>
+
+
+  <body>
+    <div class="grid">
+      <div class="col-1-4"></div>
+      <div class="col-2-4">
+        <!-- Start your code here -->
+        <div class="title">
+          Curtis La Graff<br/>
+          <span class="left">Software Engineer</span> 
+        </div>
+        <div class="contact">
+          <a href='tel:&#43;&#49; &#40;&#53;&#49;&#55;&#41; &#54;&#55;&#50;&#45;&#50;&#50;&#50;&#52;'>&#43;&#49; &#40;&#53;&#49;&#55;&#41; &#54;&#55;&#50;&#45;&#50;&#50;&#50;&#52;</a>
+          <br/>
+          <a href='&#109;ailto&#58;%6&#51;&#117;r&#116;&#105;s&#64;l&#37;61%67%72%61%66f&#46;&#109;%6&#53;'>curtis&#64;l&#97;graff&#46;me</a>
+          <br/><br/>
+          <nav>
+            <a href="https://lagraff.me/">Home</a>
+            <a href="https://lagraff.me/blog">Blog</a>
+          </nav>
+        </div>
+        <hr/>
+
+        {{ content }}
+      </div>
+    </div>
+    <div class="col-1-4"></div>
+
+    {% include analytics.html %}
+  </body>
+</html>
