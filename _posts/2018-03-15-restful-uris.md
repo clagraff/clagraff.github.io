@@ -1,6 +1,6 @@
 ---
 layout: post
-title: RESTful URLs
+title: RESTful URIs
 state: published
 ---
 What is a RESTful URI? What characteristics does it have that makes it so? Surely `GET /people/curtis` is better than `GET /getPeopleByName?name=curtis`, right?
