@@ -3,32 +3,29 @@ layout: post
 title: 3 Little Words
 state: draft
 ---
-Communication is difficult. There is always opportunity for ambiguity
-or misinterpreatation. But sometimes we go out of our way to make it
-even more difficult. Sometimes purposefully, othertimes not. 
-
-Lucklly, three little words can _occasionally_ fix that.
-
-# I don't know.
-One of my favorite phrases is "I don't know". It can take some humility 
-for people to adming when they do not know the answer to something.
-
-But I've almost always found it to be the best way to move a conversation forward.
+I consider "I don't know" to be an antithesis to
+bullshit or corprate double-speak.
 
 ## It helps foster transparency.
-Certainly from my own experieinces, I've hidden behind misdirection,
-[bullshit](http://www.math.mcgill.ca/rags/JAC/124/bs.html), or lack of detail
-when answering a question I do not know.
+Certainly from my own experieinces, I've hidden behind misdirection, or
+[bullshit](http://www.math.mcgill.ca/rags/JAC/124/bs.html), when answering a question I do not know.
 
 Why? 
 
-Maybe I didn't want to look unprofessional in not knowing. Or perhaps I did not understand
-the question. Maybe I was feeling pressured to provide _something_, even if it wasn't quite
-correct.
+Maybe I didn't want to look unprofessional in not knowing, and gave out _any_ answer.
+Or on the flip-side, I wanted to have my voice heard even if I didn't have something useful to contribute.
 
-Saying "I don't know" helps foster transparency.
+It could be I did not understand the question, and didn't want to ask for clarification.
+
+But at the end of the day, none of the above helps remedy the situation. It clouds the conversation,
+adding unnecessary complexity to what could be an already complicated topic.
+
+Admitting "I don't know" is the remedy.
+
+It is clear, concise, and abrupt. It does not leave any room for misinerpresation. 
 
 ## It is efficient
+You could make a game
 
 ## It can be empowering
 
