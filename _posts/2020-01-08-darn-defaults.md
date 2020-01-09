@@ -6,7 +6,7 @@ state: draft
 I want to share a short tale about about an adventure with Java & Spring properties, in the hopes I can prevents others for falling for the same
 issues my team did. This is a story about defaults-gone-wrong.
 
-# The Setup
+## The Setup
 
 A little bit of background is needed to have a comprehensive picture. This story revolves around our `Product API`, our `Authorization API`, 
 and the company's `Authorization Management System` or `ams` for short.
@@ -49,3 +49,20 @@ function isUserAuthorizedForResource(userID, resourceID) bool {
   return false
 }
 ```
+
+## The Problem
+
+A client reached-out about an authorization error they were receiving. They had recently submitted a request to the
+`Authorization Management System`, `ams`, to gain access to a particular API resource. But when attempting to access
+said resource, they received an auth error.
+
+Thinking over the list of possible explanations for the problem, I first checked our source-of-truth, the `ams`. And yes, they did in fact have the correct authorization. So that's not the problem.
+
+Next, I replicated the request to our `Authorization Server`. Bingo! Unauthorized.
+
+The server's in-memory cache must have their userID and available resources cached without the most recent addition. Simply
+clear the cache for that user, let it repopulate, and everything's right with the world... Right?
+
+Wrong.
+
+Clearing the cache did not help. So either the `ams` is broken, and reports the correct authorization setup in the UI but not the API (unlikely), or we are falling back to our database. But that should only happen is the `ams` is down...
