@@ -8,15 +8,16 @@ issues my team did. This is a story about defaults-gone-wrong.
 
 # The Setup
 
-A little bit of background is needed to have a comprehensive picture. This story revolves around our Product API, our Authorization API, 
-and the company's Authorization management system.
+A little bit of background is needed to have a comprehensive picture. This story revolves around our `Product API`, our `Authorization API`, 
+and the company's `Authorization Management System` or `ams` for short.
 
-To keep things simple: the Product API allows clients to get product information, assuming they are authorized. The company's
-authorization management system (auth system) is the source-of-truth on whether a client is authorized or not. The Authorization API
-exists to mediate interactions between our Product API and this source-of-truth.
+To keep things simple: the `Product API` allows clients to interact with product information, assuming they are authorized.
+The company's `ams` is the source-of-truth on whether a client is authorized or not. The `Authorization API` exists
+to mediate interactions between our Product API and this source-of-truth.
 
-Why the middleman? The Authorization API supports an in-memory cache of authorized clients, as well as a database fallback which is
-periodically updated. All in case the company's auth system in down or unavailable, which happens often.
+Why the middleman? Couldn't the `Product API` directly interact with the `ams`?
+
+Well, the `Authorization API` supports an in-memory cache of previously authorized clients, and a database fallback in casethe cache is empty and `ams` is down.
 
 So the auth flow is like this:
 
