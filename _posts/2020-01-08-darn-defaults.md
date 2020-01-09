@@ -20,7 +20,7 @@ periodically updated. All in case the company's auth system in down or unavailab
 
 So the auth flow is like this:
 
-```go
+```
 function isUserAuthorizedForResource(userID, resourceID) bool {
   var isAuthorized bool
   var err error
@@ -46,4 +46,5 @@ function isUserAuthorizedForResource(userID, resourceID) bool {
   
   // something really went wrong. cannot authorize user.
   return false
+}
 ```
