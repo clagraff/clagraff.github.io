@@ -3,7 +3,7 @@ layout: post
 title: Continuous Deploy vs Continious Delivery
 state: published
 ---
-What is the difference between **Continuous Deployment** and **Continuous Delivery**?
+What is the difference between Continuous Deployment and Continuous Delivery?
 
 They often get conflated when talking about a "CI/CD pipeline"; and honestly it wasn't something
 I've stopped to consider before. The question seems easy to answer, but I wanted to make sure I did my research.
