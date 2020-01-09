@@ -2,70 +2,14 @@
 layout: default
 ---
 
-<p>
-  Experienced developer who favors using <b>Golang</b> &amp; <b>Python</b> for developing web services. Familiar working in an <b>agile</b> and fast-paced environment. Fan of <b>paired-programming</b>, working in a <b>feature-driven development cycle</b>, and bashing away on a <b>linux</b> machine. Oh, and using <b>Docker</b> and <b>AWS</b> for deployments.
-</p>
-
-<p class="entry">
-  <h3>EXPIRIENCE</h3>
-  <span class="company">Pillar Technology / Accenture</span> - <span class="position">Software Consultant</span><br/>
-  <span class="duration">SEPTEMBER 2018 - PRESENT, Ann Arbor MI</span><br/>
-  <ul>
-    <li>Spring-based Java & Kotlin API development, for providing automotive product information to global clients.</li>
-    <li>Ops improvements for our Pivotal Cloud Foundry infrastructure to facilitate fast green-blue deploys.</li>
-    <li>Implemented metrics aggregation & analytics via Splunk and Graphite + Grafana.</li>
-    <li>Experience working with Jenkins Pipelines w/ Github to facilitate a CI/CD development flow.</li>
-  </ul>
-</p>
-
-<p class="entry">
-  <span class="company">Amber Engine</span> - <span class="position">Software Engineer</span><br/>
-  <span class="duration">JUNE 2015 - SEPTEMBER 2018, Detroit MI</span><br/>
-  <ul>
-    <li>Developed & maintained an API used for Product Information Management.</li>
-    <ul>
-      <li>Created in Golang, with utility scripts written in both Python and Go.</li>
-      <li>Utilized MongoDB for document caching & Postgres for component-based information storage.</li>
-      <li>Supports HAL+JSON in an effort to satisfy the HATEOAS constraint of REST.</li>
-      <li>Developed as a Multi-layered system for performance and organizational benefits.</li>
-    </ul>
-    <li>Used Flask & Jinja, Coffeescript, Bootstrap, and Gulp for web development.</li>
-    <li>Developed client libraries for the API in Python 2.5/3+ and NodeJS.</li>
-    <li>Used Docker and Virtual Environments for local development, and used Amazon Web Services and Fabric for production deployments.</li>
-  </ul>
-</p>
-
-<p class="entry">
-  <span class="company">Navigation Solutions</span> - <span class="position">Software Testing & Validation Itern</span><br/>
-  <span class="duration">MARCH 2013 - JUNE 2015, Bloomfield Hills MI</span><br/>
-  <ul>
-    <li>Developed automated software test stands for GPS units using Agilent Vee.</li>
-    <li>Performed functional hardware testing of the GPS units to find and report defects.</li>
-    <li>Used C++ and C to patch the debugging messaging system on the GPS units.</li>
-  </ul>
-</p>
-
-
-<p class="entry">
-  <span class="company">Federal-Mogul</span> - <span class="position">Customer Satisfaction, Global Eng. & Mfg. Intern</span><br/>
-  <span class="duration">JUNE 2011 - AUGUST 2012, Southfield MI</span><br/>
-  <ul>
-    <li>Performed data analysis & research on 3rd-party manufacturing and scheduling data to determine underperforming factories.</li>
-    <li>Developed an frontend portal for viewing a training videos about internal project mgmt software.</li>
-    <li>Generated dynamic reports using Access for highlighting suppliersÃ¢â‚¬â„¢ production quality statistics.</li>
-  </ul>
-</p>
-
-
-<p class="entry">
-  <h3>EDUCATION</h3>
-  <span class="company">Lawrence Technogolical University</span> - <span class="position">Bachelor's in Computer Engineering</span><br/>
-  <span class="duration">SEPTEMBER 2011 - JUNE 2016, Southfield MI</span><br/>
-  <ul>
-    <li>Electrical Captain for the 2015-2016 Formula Hybrid Team at Lawrence Tech.</li>
-    <ul>
-      <li>Lead developer for designing and developing the data acquisition system on the hybrid car.</li>
-    </ul>
-  </ul>
-</p>
-
+{% for post in site.posts %}
+{% unless  post.state == "draft" %}
+<article class="post">
+  <div class="entry">
+    <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+    {{ post.excerpt }}
+    <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+  </div>
+</article>
+{% endunless %}
+{% endfor %}
