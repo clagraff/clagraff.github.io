@@ -10,6 +10,11 @@ pre.highlight {
   overflow: auto;
 }
 
+p > code {
+  background-color: #ffffff;
+  margin: 0 0.3rem;
+}
+
 code {
   font-family:'Bitstream Vera Sans Mono','Courier', monospace;
 }
