@@ -11,17 +11,17 @@ issues my team did. This is a story about defaults-gone-wrong.
 A little bit of background is needed to have a comprehensive picture. This story revolves around our `Product API`, our `Authorization API`, 
 and the company's `Authorization Management System` or `ams` for short.
 
-To keep things simple: the `Product API` allows clients to interact with product information, assuming they are authorized.
+The `Product API` is how clients interact with product data, assuming they are authorized.
 The company's `ams` is the source-of-truth on whether a client is authorized or not. The `Authorization API` exists
 to mediate interactions between our Product API and this source-of-truth.
 
-Why the middleman? Couldn't the `Product API` directly interact with the `ams`?
 
-Well, the `Authorization API` supports an in-memory cache of previously authorized clients, and a database fallback in casethe cache is empty and `ams` is down.
+The `Authorization API` supports an in-memory cache of previously authorized clients, and a database fallback in case 
+the cache is empty _and_ `ams` is down.
 
 So the auth flow is like this:
 
-~~~go
+```go
 function isUserAuthorizedForResource(userID, resourceID) bool {
   var isAuthorized bool
   var err error
@@ -48,4 +48,4 @@ function isUserAuthorizedForResource(userID, resourceID) bool {
   // something really went wrong. cannot authorize user.
   return false
 }
-~~~
+```
