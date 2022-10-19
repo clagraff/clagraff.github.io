@@ -126,3 +126,20 @@ p {
   display:inline-block;
   border-radius: 50%;
 }
+
+ul.tech {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  float: right;
+}
+
+ul.tech > li {
+  display: inline-block;
+  background-color: #5CCBEA;
+  padding: 0.2em;
+  color: white;
+  font-weight: bold;
+  border: 1px solid #5CCBEA;
+  border-radius: 5px;
+}
