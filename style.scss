@@ -18,7 +18,7 @@
 html, body {
   background-color: #ffffff;
   font-family: Segoe UI, Helvetica, Arial, sans-serif;
-  font-size: 18px;
+  font-size: 14px;
 }
 
 body {
@@ -78,8 +78,8 @@ hr {
 }
 
 .entry {
-  line-height: 1.5em;
-  margin-top: 2em;
+  //line-height: 1.5em;
+  //margin-top: 2em;
 }
 
 .project {
@@ -112,7 +112,7 @@ a {
 }
 
 p {
-  margin-bottom: 1.5rem;
+ //  margin-bottom: 1.5rem;
 }
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
