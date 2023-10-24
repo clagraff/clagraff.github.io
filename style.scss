@@ -39,6 +39,13 @@ hr {
   clear: both;
 }
 
+@media print {
+  hr {
+    visibility: hidden;
+  }
+}
+
+
 .title {
   font-family: 'Oswald', sans-serif;
   font-size: 2em;
