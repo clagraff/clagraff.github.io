@@ -154,3 +154,18 @@ i {
   color: #E91D63;
   font-style: normal;
 }
+
+
+ul.inline-list {
+    list-style-type: none;
+    padding: 0;
+  color: #46071d;
+}
+
+ul.inline-list li {
+    display: inline;
+}
+
+ul.inline-list li:not(:last-child)::after {
+    content: " | ";
+}
