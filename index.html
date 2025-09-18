@@ -13,6 +13,10 @@
       .avoid-break { break-inside: avoid; }
     }
     .accent { color: #e91d63; }
+
+    /* Reusable spacing utility for consistent article layout */
+    .article-stack > * { margin: 0; }
+    .article-stack > * + * { margin-top: 0.5rem; } /* adjust once to tune all gaps */
   </style>
 </head>
 <body class="bg-white text-zinc-900 antialiased">
@@ -39,8 +43,8 @@
       <!-- Sidebar -->
       <aside class="col-span-12 md:col-span-2 space-y-4">
         <section class="avoid-break">
-          <h2 class="text-sm font-semibold accent">Skills</h2>
-          <ul class="mt-1 space-y-1 text-[0.86rem] leading-5">
+          <h2 class="text-sm font-semibold accent mb-2">Skills</h2>
+          <ul class="space-y-1 text-[0.86rem] leading-5">
             <li>C# / .NET</li>
             <li>Java / Spring Boot</li>
             <li>Python · Golang</li>
@@ -57,18 +61,18 @@
 
       <!-- Main column -->
       <div class="col-span-12 md:col-span-10 space-y-5">
-        <h2 class="text-sm font-semibold accent">Experience</h2>
+        <h2 class="text-sm font-semibold accent mb-2">Experience</h2>
 
         <!-- Klutch -->
-        <article class="avoid-break">
+        <article class="avoid-break article-stack">
           <header class="flex justify-between items-baseline">
             <div>
-              <h3 class="font-medium">Klutch Software</h3>
+              <h3 class="font-medium leading-tight">Klutch Software</h3>
               <p class="text-sm text-zinc-600">President, Principal Software Engineer</p>
             </div>
             <div class="text-sm text-zinc-600">2021 – Present</div>
           </header>
-          <p class="mt-1 text-[0.9rem] leading-6">
+          <p class="text-[0.9rem] leading-6">
             Led consulting engagements delivering enterprise inventory platforms in the maritime/dealership space,
             including C#/.NET management systems, Blazor interfaces, ETL integrations, and Azure-hosted services.
           </p>
@@ -80,15 +84,15 @@
         </article>
 
         <!-- Accenture -->
-        <article class="avoid-break">
+        <article class="avoid-break article-stack">
           <header class="flex justify-between items-baseline">
             <div>
-              <h3 class="font-medium">Accenture – Industry X</h3>
+              <h3 class="font-medium leading-tight">Accenture – Industry X</h3>
               <p class="text-sm text-zinc-600">Developer Associate Manager</p>
             </div>
             <div class="text-sm text-zinc-600">2018 – 2021</div>
           </header>
-          <p class="mt-1 text-[0.9rem] leading-6">
+          <p class="text-[0.9rem] leading-6">
             Consulted on financial and automotive platforms, building Java/Spring Boot APIs and React components
             for enterprise workflows, and supporting major launches with SRE responsibilities.
           </p>
@@ -99,15 +103,15 @@
         </article>
 
         <!-- Amber Engine -->
-        <article class="avoid-break">
+        <article class="avoid-break article-stack">
           <header class="flex justify-between items-baseline">
             <div>
-              <h3 class="font-medium">Amber Engine</h3>
+              <h3 class="font-medium leading-tight">Amber Engine</h3>
               <p class="text-sm text-zinc-600">Software Engineer</p>
             </div>
             <div class="text-sm text-zinc-600">2015 – 2018</div>
           </header>
-          <p class="mt-1 text-[0.9rem] leading-6">
+          <p class="text-[0.9rem] leading-6">
             Built Python/Golang ETL APIs to ingest manufacturer inventory and developed portals with Angular.
             Improved deployments by migrating from EC2+Fabric to AWS serverless with Docker.
           </p>
@@ -118,15 +122,15 @@
         </article>
 
         <!-- Navigation Solutions -->
-        <article class="avoid-break">
+        <article class="avoid-break article-stack">
           <header class="flex justify-between items-baseline">
             <div>
-              <h3 class="font-medium">Navigation Solutions</h3>
+              <h3 class="font-medium leading-tight">Navigation Solutions</h3>
               <p class="text-sm text-zinc-600">Software Engineer</p>
             </div>
             <div class="text-sm text-zinc-600">2013 – 2015</div>
           </header>
-          <p class="mt-1 text-[0.9rem] leading-6">
+          <p class="text-[0.9rem] leading-6">
             Developed automated test frameworks for in-vehicle GPS systems (Agilent Vee, C#), supported C/C++ debugging,
             maintained Python data pipelines for POI packaging, and investigated routing issues to improve accuracy.
           </p>
@@ -134,8 +138,8 @@
 
         <!-- Education -->
         <section class="avoid-break">
-          <h2 class="mt-4 text-sm font-semibold accent">Education</h2>
-          <div class="mt-1">
+          <h2 class="mt-2 text-sm font-semibold accent mb-2">Education</h2>
+          <div>
             <p class="text-[0.93rem] font-medium">Lawrence Technological University</p>
             <p class="text-[0.93rem] text-zinc-700">B.S. Computer Engineering</p>
             <p class="text-[0.86rem] text-zinc-600">2011–2016 · Southfield, MI</p>
