@@ -31,52 +31,40 @@
       </ul>
     </header>
 
-    <!-- Summary moved above the two-column layout -->
+    <!-- Summary (above two-column layout) -->
     <section class="mt-4">
       <h2 class="text-sm font-semibold accent">Summary</h2>
       <p class="mt-1 text-[0.9rem] leading-6">
-            Software engineer and independent consultant, running a consultancy delivering enterprise platforms, backend APIs, and cloud solutions.
-            Experienced in modernizing CI/CD pipelines, scaling systems in Azure and AWS, and strengthening reliability across diverse client engagements in automotive, finance, and SaaS.
+        Software engineer and independent consultant, running a consultancy delivering enterprise platforms, backend APIs, and cloud solutions.
+        Experienced in modernizing CI/CD pipelines, scaling systems in Azure and AWS, and strengthening reliability across diverse client engagements
+        in automotive, finance, and SaaS.
       </p>
     </section>
 
-    <!-- Two-column layout: narrower sidebar (3/12) + wider main (9/12) -->
+    <!-- Two-column layout: narrower sidebar (2/12) + wider main (10/12) -->
     <section class="mt-4 grid grid-cols-12 gap-6">
-      <!-- Sidebar now narrower -->
-      <aside class="col-span-12 md:col-span-3 space-y-5">
+      <!-- Sidebar (narrow) -->
+      <aside class="col-span-12 md:col-span-2 space-y-4">
         <!-- Skills -->
         <section class="avoid-break">
           <h2 class="text-sm font-semibold accent">Skills</h2>
-          <div class="mt-1 grid grid-cols-1 gap-y-1 text-[0.88rem]">
-            <ul class="space-y-1">
-              <li>C# / .NET</li>
-              <li>Java / Spring Boot</li>
-              <li>Python</li>
-              <li>Golang</li>
-              <li>SQL (MS SQL)</li>
-              <li>Azure · AWS · PCF</li>
-              <li>Docker</li>
-              <li>CI/CD · TDD</li>
-              <li>SRE / Monitoring</li>
-              <li>React · Angular · Blazor</li>
-              <li>Splunk · Dynatrace</li>
-            </ul>
-          </div>
-        </section>
-
-        <!-- Education -->
-        <section class="avoid-break">
-          <h2 class="text-sm font-semibold accent">Education</h2>
-          <p class="mt-1 text-[0.9rem] leading-6">
-            <span class="font-medium">Lawrence Technological University</span><br/>
-            B.S. Computer Engineering · 2011–2016<br/>
-            Formula Hybrid (Electrical Lead); Tau Beta Pi Treasurer
-          </p>
+          <ul class="mt-1 space-y-1 text-[0.86rem] leading-5">
+            <li>C# / .NET</li>
+            <li>Java / Spring Boot</li>
+            <li>Python · Golang</li>
+            <li>SQL (MS SQL)</li>
+            <li>Azure · AWS · PCF</li>
+            <li>Docker</li>
+            <li>CI/CD · TDD</li>
+            <li>SRE / Monitoring</li>
+            <li>React · Angular · Blazor</li>
+            <li>Splunk · Dynatrace</li>
+          </ul>
         </section>
       </aside>
 
-      <!-- Main column widened -->
-      <div class="col-span-12 md:col-span-9 space-y-5">
+      <!-- Main column (wider) -->
+      <div class="col-span-12 md:col-span-10 space-y-5">
         <h2 class="text-sm font-semibold accent">Experience</h2>
 
         <!-- Klutch -->
@@ -147,13 +135,21 @@
             <div class="text-sm text-zinc-600">2013 – 2015</div>
           </header>
           <p class="mt-1 text-[0.9rem] leading-6">
-            Developed automated test frameworks for in-vehicle GPS systems (Agilent Vee, C#),
-            supported C/C++ debugging, and maintained Python data pipelines for POI packaging.
+            Developed automated test frameworks for in-vehicle GPS systems (Agilent Vee, C#), supported C/C++ debugging,
+            maintained Python data pipelines for POI packaging, and investigated routing issues to improve accuracy.
           </p>
-          <ul class="list-disc pl-5 text-[0.88rem] leading-6">
-            <li>Investigated and resolved field-reported routing discrepancies to improve navigation accuracy.</li>
-          </ul>
         </article>
+
+        <!-- Education (moved here under Experience) -->
+        <section class="avoid-break">
+          <h2 class="mt-4 text-sm font-semibold accent">Education</h2>
+          <div class="mt-1">
+            <p class="text-[0.93rem] font-medium">Lawrence Technological University</p>
+            <p class="text-[0.93rem] text-zinc-700">B.S. Computer Engineering</p>
+            <p class="text-[0.86rem] text-zinc-600">2011–2016 · Southfield, MI</p>
+            <p class="text-[0.86rem] text-zinc-700 mt-1">Formula Hybrid (Electrical Lead); Tau Beta Pi Treasurer</p>
+          </div>
+        </section>
       </div>
     </section>
 
