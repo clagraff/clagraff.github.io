@@ -1,110 +1,159 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Curtis La Graff – Software Engineer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @page { size: Letter; margin: 0.6in; }
+    @media print {
+      .no-print { display: none !important; }
+      a { text-decoration: none !important; color: inherit !important; }
+      .avoid-break { break-inside: avoid; }
+    }
+    .accent { color: #e91d63; }
+  </style>
+</head>
+<body class="bg-white text-zinc-900 antialiased">
+  <main class="mx-auto max-w-5xl p-6">
+    <!-- Header -->
+    <header class="flex items-start justify-between border-b border-zinc-200 pb-3">
+      <div>
+        <h1 class="text-2xl font-semibold">Curtis La Graff</h1>
+        <p class="text-sm text-zinc-600">Software Engineer · Consultant</p>
+      </div>
+      <ul class="text-sm text-zinc-700 text-right leading-6">
+        <li><a href="tel:+15176722224">+1 (517) 672-2224</a></li>
+        <li><a href="mailto:curtis@lagraff.me">curtis@lagraff.me</a></li>
+        <li>Pinckney, MI</li>
+        <li><a href="https://www.lagraff.me" target="_blank">www.lagraff.me</a></li>
+      </ul>
+    </header>
 
-<!--<p>As a seasoned software engineer, I bring over a decade of diverse experience, seamlessly transitioning between industries and harnessing an array of technologies. My expertise lies not only in consulting and fostering team growth but also in championing site-reliability engineering and crafting robust back-end services. </p>-->
-<ul class="inline-list">
-    <li>C#</li>
-    <li>.NET</li>
-    <li>Java</li>
-    <li>Springboot</li>
-    <li>Python</li>
-    <li>Flask</li>
-    <li>Django</li>
-    <li>Pyramid</li>
-    <li>Golang</li>
-    <li>Javascript</li>
-    <li>Typescript</li>
-    <li>Angular</li>
-    <li>React</li>
-    <li>AWS</li>
-    <li>Azure</li>
-    <li>PCF</li>
-    <li>Test-Driven Development (TDD)</li>
-    <li>Continuous Integration (CI)</li>
-    <li>Continuous Deployment (CD)</li>
-    <li>Agile methodologies</li>
-</ul>
-<p class="entry">
-  <h3>EXPERIENCE</h3>
-  <span class="duration">SEPTEMBER 2021 - CURRENT, Pinckney MI</span>
-  <span class="company">Klutch Software</span> - <span class="position">President, Principal Software Engineer</span>
-  <p>
-    <ul>
-      <li>Senior consultant for client in maritime industry, specializing in inventory solutions for dealerships</li>
-      <ul>
-        <li>Development of product management system in C# .NET for managing marimtime inventory for dealerships and private-sellers</li>
-        <li>Front-end UI development using C# Blazor compiled to WebAssembly for consumer-facing marketplaces and our inventory management product</li>
-        <li>Responsible for 3rd-party integrations of data coming through the system, including ETL process for ingesting external client inventory</li>
-        <li>Infrastructure management for services running on Azure, including WebApps, Search, Functions, Storage, and more. Bicep and powershell experience.</li>
-        <li>Extensive usage of Redis, Azure Search, and Azure Datalakes for document storage, MS SQL for relational storage</li>
-      </ul>
-      <li>Short-term consultant for Toyota to develop autoshow on-site inventory management API</li>
-      <ul>
-        <li>Developed C# .NET API to be used by autoshow workers to manage inventory present at a given show</li>
-        <li>API designed to work on-site with limited external networking capabilities, emphasizing local caching of vehicle information</li>
-        <li>Asynchrounus ETL pipeline to periodically pull inventory information and copy vessel photos & windowsticker images, network permitting</li>
-      </ul>
-    </ul>
-  </p>
-</p>
-<p class="entry">
-  <span class="duration">SEPTEMBER 2018 - SEPTEMBER 2021, Ann Arbor MI</span>
-  <span class="company">Accenture &#xfe58; Industry X</span> - <span class="position">Developer Associate Manager</span>
-  <p>
-    <ul>
-      <li>Consulted with Intuit on their Payroll Protection Program (PPP) interface</li>
-      <ul>
-        <li>API development in Java and Springboot to manage customer and PPP information</li>
-        <li>React development of UI components within Quickbooks online for the PPP-relevant pages</li>
-      </ul>
-      <li>Consulted with two Ford teams responsible for Build-and-Price back-end services</li>
-      <ul>
-        <li>Worked with a Java/Springboot team responsible for providing vehicle configurations to both internal and external Ford tools</li>
-        <li>Developed intergrations with global emissions team to provide Co2 information for a given vehicle configuration</li>
-        <li>Played a pivotal role in the Ford Mach-E launch on the team responsible for providing vehicle configurations used by the marketing site</li>
-        <li>Setup and management of production monitoring & dashboards using Splunk, Dynatrace for multiple Ford teams</li>
-        <li>Worked as an SRE handling production incidents for global clients.</li>
-      </ul>
-    </ul>
-  </p>
-</p>
-<p class="entry">
-  <span class="duration">JUNE 2015 - SEPTEMBER 2018, Detroit MI</span>
-  <span class="company">Amber Engine</span> - <span class="position">Software Engineer</span>
-  <p>
-    <ul>
-      <li>Designed a Python and Golang APIs for an ETL system managing furniture specification & retail information</li>
-      <li>Developed and designed several retailer portals using Python, Typescript, and Angular</li>
-      <li>Transitioned the company onto AWS serverless deploys using Docker, from EC2 deploys via Python Fabric</li>
-    </ul>
-  </p>
-</p>
-<p class="entry">
-  <span class="duration">MARCH 2013 - JUNE 2015, Bloomfield Hills MI</span>
-  <span class="company">Navigation Solutions</span> - <span class="position">Software Testing & Validation Itern</span>
-  <p>
-    <ul>
-      <li>Developed automated hardware and software tests for GPS headunits using Agilent Vee and C++</li>
-      <li>Squashed bugs in the GPS headunits' debug bus in C++ and C</li>
-    </ul>
-  </p>
-</p>
-<p class="entry">
-  <span class="duration">JUNE 2011 - AUGUST 2012, Southfield MI</span>
-  <span class="company">Federal-Mogul</span> - <span class="position">Customer Satisfaction, Global Eng. & Mfg. Intern</span><br/>
-  <p>
-    <ul>
-      <li>Performed data analytics on 3rd-party manufacturing and scheduling data to identify under-performing parts factories</li>
-      <li>Developed training video portal in HTML & Javascript to support internal rollout of Winchill PLM software</li>
-    </ul>
-  </p>
-</p>
-<p class="entry">
-  <h3>EDUCATION</h3>
-  <span class="duration">SEPTEMBER 2011 - JUNE 2016, Southfield MI</span>
-  <span class="company">Lawrence Technological University</span> - <span class="position">Bachelor's in Computer Engineering</span><br/>
-  <p>
-    Electrical team captain for 2015-2016 Formula Hybrid team. Tau Beta Pi honor society treasurer for 2016.
-  </p>
-</p>
+    <section class="mt-4 grid grid-cols-12 gap-6">
+      <!-- Sidebar -->
+      <aside class="col-span-12 md:col-span-4 space-y-5">
+        <section>
+          <h2 class="text-sm font-semibold accent">Summary</h2>
+          <p class="mt-1 text-[0.9rem] leading-6">
+            Senior engineer and consultant specializing in backend/API systems,
+            test automation, and cloud delivery. Experienced modernizing CI/CD,
+            strengthening reliability, and delivering solutions at scale.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-sm font-semibold accent">Skills</h2>
+          <div class="mt-1 grid grid-cols-2 gap-y-1 text-[0.88rem]">
+            <ul class="space-y-1">
+              <li>C# / .NET</li><li>Java / Spring Boot</li><li>Python</li>
+              <li>Golang</li><li>SQL (MS SQL)</li>
+            </ul>
+            <ul class="space-y-1">
+              <li>Azure · AWS · PCF</li><li>Docker</li><li>CI/CD · TDD</li>
+              <li>SRE / Monitoring</li><li>React · Angular · Blazor</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="text-sm font-semibold accent">Education</h2>
+          <p class="mt-1 text-[0.9rem] leading-6">
+            <span class="font-medium">Lawrence Technological University</span><br/>
+            B.S. Computer Engineering · 2011–2016<br/>
+            Formula Hybrid (Electrical Lead); Tau Beta Pi Treasurer
+          </p>
+        </section>
+      </aside>
+
+      <!-- Main Column -->
+      <div class="col-span-12 md:col-span-8 space-y-4">
+        <h2 class="text-sm font-semibold accent">Experience</h2>
+
+        <!-- Klutch -->
+        <article class="avoid-break">
+          <header class="flex justify-between items-baseline">
+            <div>
+              <h3 class="font-medium">Klutch Software</h3>
+              <p class="text-sm text-zinc-600">President, Principal Software Engineer</p>
+            </div>
+            <div class="text-sm text-zinc-600">2021 – Present</div>
+          </header>
+          <p class="mt-1 text-[0.9rem] leading-6">
+            Led consulting engagements delivering enterprise inventory platforms in the maritime/dealership space,
+            including C#/.NET management systems, Blazor interfaces, ETL integrations, and Azure-hosted services.
+          </p>
+          <ul class="list-disc pl-5 text-[0.88rem]">
+            <li>Improved release speed and reliability with CI/CD automation and resilient APIs.</li>
+            <li>Partnered with product/ops teams to integrate third-party inventory data sources.</li>
+            <li>Built APIs with local caching/async sync to ensure reliability in constrained environments.</li>
+          </ul>
+        </article>
+
+        <!-- Accenture -->
+        <article class="avoid-break">
+          <header class="flex justify-between items-baseline">
+            <div>
+              <h3 class="font-medium">Accenture – Industry X</h3>
+              <p class="text-sm text-zinc-600">Developer Associate Manager</p>
+            </div>
+            <div class="text-sm text-zinc-600">2018 – 2021</div>
+          </header>
+          <p class="mt-1 text-[0.9rem] leading-6">
+            Consulted on financial and automotive platforms, building Java/Spring Boot APIs and React components
+            for enterprise workflows, and supporting major launches with SRE responsibilities.
+          </p>
+          <ul class="list-disc pl-5 text-[0.88rem]">
+            <li>Established monitoring/dashboards (Splunk, Dynatrace) and resolved global incidents.</li>
+            <li>Collaborated with compliance teams to deliver configuration and emissions data at scale.</li>
+          </ul>
+        </article>
+
+        <!-- Amber Engine -->
+        <article class="avoid-break">
+          <header class="flex justify-between items-baseline">
+            <div>
+              <h3 class="font-medium">Amber Engine</h3>
+              <p class="text-sm text-zinc-600">Software Engineer</p>
+            </div>
+            <div class="text-sm text-zinc-600">2015 – 2018</div>
+          </header>
+          <p class="mt-1 text-[0.9rem] leading-6">
+            Built Python/Golang ETL APIs to ingest manufacturer inventory and developed portals with Angular.
+            Improved deployments by migrating from EC2+Fabric to AWS serverless with Docker.
+          </p>
+          <ul class="list-disc pl-5 text-[0.88rem]">
+            <li>Delivered retailer-facing portals for managing and publishing inventory data.</li>
+            <li>Enhanced operational efficiency by modernizing deployment workflows.</li>
+          </ul>
+        </article>
+
+        <!-- Navigation Solutions -->
+        <article class="avoid-break">
+          <header class="flex justify-between items-baseline">
+            <div>
+              <h3 class="font-medium">Navigation Solutions</h3>
+              <p class="text-sm text-zinc-600">Software Engineer</p>
+            </div>
+            <div class="text-sm text-zinc-600">2013 – 2015</div>
+          </header>
+          <p class="mt-1 text-[0.9rem] leading-6">
+            Developed automated test frameworks for in-vehicle GPS systems (Agilent Vee, C#),
+            supported C/C++ debugging, and maintained Python data pipelines for POI packaging.
+          </p>
+          <ul class="list-disc pl-5 text-[0.88rem]">
+            <li>Investigated and resolved field-reported routing discrepancies to improve navigation accuracy.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <div class="no-print mt-6 flex justify-end">
+      <button onclick="window.print()" class="px-3 py-1.5 text-sm rounded bg-[#e91d63] text-white hover:bg-pink-700">
+        Print / Save as PDF
+      </button>
+    </div>
+  </main>
+</body>
+</html>
