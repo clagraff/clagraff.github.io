@@ -31,45 +31,52 @@
       </ul>
     </header>
 
-    <section class="mt-4 grid grid-cols-12 gap-6">
-      <!-- Sidebar -->
-      <aside class="col-span-12 md:col-span-4 space-y-5">
-        <section>
-          <h2 class="text-sm font-semibold accent">Summary</h2>
-          <p class="mt-1 text-[0.9rem] leading-6">
-            Senior engineer and consultant specializing in backend/API systems,
-            test automation, and cloud delivery. Experienced modernizing CI/CD,
-            strengthening reliability, and delivering solutions at scale.
-          </p>
-        </section>
+    <!-- Summary moved above the two-column layout -->
+    <section class="mt-4">
+      <h2 class="text-sm font-semibold accent">Summary</h2>
+      <p class="mt-1 text-[0.9rem] leading-6">
+        Senior engineer and consultant specializing in backend/API systems, test automation, and cloud delivery.
+        Experienced modernizing CI/CD, strengthening reliability, and delivering solutions at scale.
+      </p>
+    </section>
 
-        <section>
+    <!-- Two-column layout: narrower sidebar (3/12) + wider main (9/12) -->
+    <section class="mt-4 grid grid-cols-12 gap-6">
+      <!-- Sidebar now narrower -->
+      <aside class="col-span-12 md:col-span-3 space-y-5">
+        <!-- Skills -->
+        <section class="avoid-break">
           <h2 class="text-sm font-semibold accent">Skills</h2>
-          <div class="mt-1 grid grid-cols-2 gap-y-1 text-[0.88rem]">
+          <div class="mt-1 grid grid-cols-1 gap-y-1 text-[0.88rem]">
             <ul class="space-y-1">
-              <li>C# / .NET</li><li>Java / Spring Boot</li><li>Golang</li>
-              <li>SQL (MS SQL)</li><li>Python</li>
-            </ul>
-            <ul class="space-y-1">
-              <li>Azure · AWS · PCF</li><li>Docker</li><li>CI/CD · TDD · XP</li>
-              <li>SRE / Monitoring</li><li>React · Angular · Blazor</li>
+              <li>C# / .NET</li>
+              <li>Java / Spring Boot</li>
+              <li>Python</li>
+              <li>Golang</li>
+              <li>SQL (MS SQL)</li>
+              <li>Azure · AWS · PCF</li>
+              <li>Docker</li>
+              <li>CI/CD · TDD</li>
+              <li>SRE / Monitoring</li>
+              <li>React · Angular · Blazor</li>
+              <li>Splunk · Dynatrace</li>
             </ul>
           </div>
         </section>
 
-        <section>
+        <!-- Education -->
+        <section class="avoid-break">
           <h2 class="text-sm font-semibold accent">Education</h2>
           <p class="mt-1 text-[0.9rem] leading-6">
             <span class="font-medium">Lawrence Technological University</span><br/>
             B.S. Computer Engineering · 2011–2016<br/>
-            <span class="text-xs">Formula Hybrid (Electrical Lead)<br/></span>
-            <span class="text-xs">Tau Beta Pi (Treasurer)</span>
+            Formula Hybrid (Electrical Lead); Tau Beta Pi Treasurer
           </p>
         </section>
       </aside>
 
-      <!-- Main Column -->
-      <div class="col-span-12 md:col-span-8 space-y-4">
+      <!-- Main column widened -->
+      <div class="col-span-12 md:col-span-9 space-y-5">
         <h2 class="text-sm font-semibold accent">Experience</h2>
 
         <!-- Klutch -->
@@ -83,11 +90,11 @@
           </header>
           <p class="mt-1 text-[0.9rem] leading-6">
             Led consulting engagements delivering enterprise inventory platforms in the maritime/dealership space,
-            including C#/.NET management systems, MudBlazor UIs, ETL integrations, and Azure-hosted services.
+            including C#/.NET management systems, Blazor interfaces, ETL integrations, and Azure-hosted services.
           </p>
-          <ul class="list-disc pl-5 text-[0.88rem]">
+          <ul class="list-disc pl-5 text-[0.88rem] leading-6">
             <li>Improved release speed and reliability with CI/CD automation and resilient APIs.</li>
-            <li>Partnered with product/ops teams to integrate third-party inventory data sources.</li>
+            <li>Integrated third-party inventory sources to streamline ingestion and data quality.</li>
             <li>Built APIs with local caching/async sync to ensure reliability in constrained environments.</li>
           </ul>
         </article>
@@ -105,9 +112,9 @@
             Consulted on financial and automotive platforms, building Java/Spring Boot APIs and React components
             for enterprise workflows, and supporting major launches with SRE responsibilities.
           </p>
-          <ul class="list-disc pl-5 text-[0.88rem]">
+          <ul class="list-disc pl-5 text-[0.88rem] leading-6">
             <li>Established monitoring/dashboards (Splunk, Dynatrace) and resolved global incidents.</li>
-            <li>Collaborated with compliance teams to deliver configuration and emissions data at scale.</li>
+            <li>Delivered configuration/compliance data services for high-visibility releases.</li>
           </ul>
         </article>
 
@@ -124,7 +131,7 @@
             Built Python/Golang ETL APIs to ingest manufacturer inventory and developed portals with Angular.
             Improved deployments by migrating from EC2+Fabric to AWS serverless with Docker.
           </p>
-          <ul class="list-disc pl-5 text-[0.88rem]">
+          <ul class="list-disc pl-5 text-[0.88rem] leading-6">
             <li>Delivered retailer-facing portals for managing and publishing inventory data.</li>
             <li>Enhanced operational efficiency by modernizing deployment workflows.</li>
           </ul>
@@ -143,7 +150,7 @@
             Developed automated test frameworks for in-vehicle GPS systems (Agilent Vee, C#),
             supported C/C++ debugging, and maintained Python data pipelines for POI packaging.
           </p>
-          <ul class="list-disc pl-5 text-[0.88rem]">
+          <ul class="list-disc pl-5 text-[0.88rem] leading-6">
             <li>Investigated and resolved field-reported routing discrepancies to improve navigation accuracy.</li>
           </ul>
         </article>
