@@ -14,9 +14,9 @@
     }
     .accent { color: #e91d63; }
 
-    /* Consistent spacing inside each article */
+    /* Reusable spacing utility for consistent article layout */
     .article-stack > * { margin: 0; }
-    .article-stack > * + * { margin-top: 0.5rem; }
+    .article-stack > * + * { margin-top: 0.5rem; } /* adjust once to tune all gaps */
   </style>
 </head>
 <body class="bg-white text-zinc-900 antialiased">
@@ -34,7 +34,7 @@
         <li><a href="tel:+15176722224">+1 (517) 672-2224</a></li>
         <li><a href="mailto:curtis@lagraff.me">curtis@lagraff.me</a></li>
         <li>Pinckney, MI</li>
-        <li><a href="https://www.lagraff.me" target="_blank" rel="noopener">www.lagraff.me</a></li>
+        <li><a href="https://www.lagraff.me" target="_blank">www.lagraff.me</a></li>
       </ul>
     </header>
 
@@ -60,101 +60,92 @@
       </aside>
 
       <!-- Main column -->
-      <div class="col-span-12 md:col-span-10">
+      <div class="col-span-12 md:col-span-10 space-y-5">
         <h2 class="text-sm font-semibold accent mb-2">Experience</h2>
-        <div class="space-y-5">
 
-          <!-- Klutch -->
-          <article class="avoid-break article-stack">
-            <header class="flex justify-between items-baseline">
-              <div>
-                <h3 class="font-medium leading-tight">Klutch Software</h3>
-                <p class="text-sm text-zinc-600">President, Principal Software Engineer</p>
-              </div>
-              <div class="text-sm text-zinc-600">2021 – Present</div>
-            </header>
-            <p class="text-[0.9rem] leading-6">
-              Lead consulting builds of inventory platforms for maritime/dealership clients, covering C#/.NET services, Blazor WebAssembly UIs,
-              third-party ETL integrations, and Azure deployments for day-to-day operations.
-            </p>
-            <ul class="list-disc pl-5 text-[0.88rem] leading-6">
-              <li>Built APIs with local caching and async sync to work in offline/low-bandwidth settings.</li>
-              <li>Integrated external inventory feeds via custom ETL pipelines and data quality checks.</li>
-              <li>Managed Azure resources (WebApps, Functions, Storage, Search) and automated CI/CD.</li>
-            </ul>
-          </article>
-
-          <!-- Accenture -->
-          <article class="avoid-break article-stack">
-            <header class="flex justify-between items-baseline">
-              <div>
-                <h3 class="font-medium leading-tight">Accenture – Industry X</h3>
-                <p class="text-sm text-zinc-600">Developer Associate Manager</p>
-              </div>
-              <div class="text-sm text-zinc-600">2018 – 2021</div>
-            </header>
-            <p class="text-[0.9rem] leading-6">
-              Built Java/Spring Boot APIs and React features for large financial and automotive programs, and supported high-visibility launches
-              as part of on-call/SRE rotations.
-            </p>
-            <ul class="list-disc pl-5 text-[0.88rem] leading-6">
-              <li>Delivered services for vehicle configuration and compliance/emissions data.</li>
-              <li>Created Splunk/Dynatrace dashboards and handled global production incidents.</li>
-              <li>Collaborated across teams through pairing, design reviews, and release planning.</li>
-            </ul>
-          </article>
-
-          <!-- Amber Engine -->
-          <article class="avoid-break article-stack">
-            <header class="flex justify-between items-baseline">
-              <div>
-                <h3 class="font-medium leading-tight">Amber Engine</h3>
-                <p class="text-sm text-zinc-600">Software Engineer</p>
-              </div>
-              <div class="text-sm text-zinc-600">2015 – 2018</div>
-            </header>
-            <p class="text-[0.9rem] leading-6">
-              Worked on furniture retail data systems: ETL for manufacturer feeds, retailer portals, and a shift from script-based EC2 deploys
-              to containerized/serverless AWS workflows.
-            </p>
-            <ul class="list-disc pl-5 text-[0.88rem] leading-6">
-              <li>Designed Python/Golang APIs to ingest, normalize, and publish inventory to vendors.</li>
-              <li>Built Angular/TypeScript portals for retailers to manage and publish product data.</li>
-              <li>Migrated deployments from EC2/Fabric to Docker-based and serverless setups in AWS.</li>
-            </ul>
-          </article>
-
-          <!-- Navigation Solutions -->
-          <article class="avoid-break article-stack">
-            <header class="flex justify-between items-baseline">
-              <div>
-                <h3 class="font-medium leading-tight">Navigation Solutions</h3>
-                <p class="text-sm text-zinc-600">Software Engineer</p>
-              </div>
-              <div class="text-sm text-zinc-600">2013 – 2015</div>
-            </header>
-            <p class="text-[0.9rem] leading-6">
-              Supported development and testing of GPS software for rental fleets, spanning automation, data packaging, and field issue triage.
-            </p>
-            <ul class="list-disc pl-5 text-[0.88rem] leading-6">
-              <li>Automated functional tests with Agilent Vee and C#; maintained POI packaging pipelines in Python.</li>
-              <li>Debugged C/C++ navigation code and investigated routing issues from field reports.</li>
-              <li>Contributed to CI/CD jobs for distributing updated map and POI data to devices.</li>
-            </ul>
-          </article>
-
-          <!-- Education -->
-          <section class="avoid-break">
-            <h2 class="mt-2 text-sm font-semibold accent mb-2">Education</h2>
+        <!-- Klutch -->
+        <article class="avoid-break article-stack">
+          <header class="flex justify-between items-baseline">
             <div>
-              <p class="text-[0.93rem] font-medium">Lawrence Technological University</p>
-              <p class="text-[0.93rem] text-zinc-700">B.S. Computer Engineering</p>
-<!--               <p class="text-[0.86rem] text-zinc-600">2011–2016 · Southfield, MI</p>
-              <p class="text-[0.86rem] text-zinc-700 mt-1">Formula Hybrid (Electrical Lead); Tau Beta Pi Treasurer</p> -->
+              <h3 class="font-medium leading-tight">Klutch Software</h3>
+              <p class="text-sm text-zinc-600">President, Principal Software Engineer</p>
             </div>
-          </section>
+            <div class="text-sm text-zinc-600">2021 – Present</div>
+          </header>
+          <p class="text-[0.9rem] leading-6">
+            Led consulting engagements delivering enterprise inventory platforms in the maritime/dealership space,
+            including C#/.NET management systems, Blazor interfaces, ETL integrations, and Azure-hosted services.
+          </p>
+          <ul class="list-disc pl-5 text-[0.88rem] leading-6">
+            <li>Improved release speed and reliability with CI/CD automation and resilient APIs.</li>
+            <li>Integrated third-party inventory sources to streamline ingestion and data quality.</li>
+            <li>Built APIs with local caching/async sync to ensure reliability in constrained environments.</li>
+          </ul>
+        </article>
 
-        </div>
+        <!-- Accenture -->
+        <article class="avoid-break article-stack">
+          <header class="flex justify-between items-baseline">
+            <div>
+              <h3 class="font-medium leading-tight">Accenture – Industry X</h3>
+              <p class="text-sm text-zinc-600">Developer Associate Manager</p>
+            </div>
+            <div class="text-sm text-zinc-600">2018 – 2021</div>
+          </header>
+          <p class="text-[0.9rem] leading-6">
+            Consulted on financial and automotive platforms, building Java/Spring Boot APIs and React components
+            for enterprise workflows, and supporting major launches with SRE responsibilities.
+          </p>
+          <ul class="list-disc pl-5 text-[0.88rem] leading-6">
+            <li>Established monitoring/dashboards (Splunk, Dynatrace) and resolved global incidents.</li>
+            <li>Delivered configuration/compliance data services for high-visibility releases.</li>
+          </ul>
+        </article>
+
+        <!-- Amber Engine -->
+        <article class="avoid-break article-stack">
+          <header class="flex justify-between items-baseline">
+            <div>
+              <h3 class="font-medium leading-tight">Amber Engine</h3>
+              <p class="text-sm text-zinc-600">Software Engineer</p>
+            </div>
+            <div class="text-sm text-zinc-600">2015 – 2018</div>
+          </header>
+          <p class="text-[0.9rem] leading-6">
+            Built Python/Golang ETL APIs to ingest manufacturer inventory and developed portals with Angular.
+            Improved deployments by migrating from EC2+Fabric to AWS serverless with Docker.
+          </p>
+          <ul class="list-disc pl-5 text-[0.88rem] leading-6">
+            <li>Delivered retailer-facing portals for managing and publishing inventory data.</li>
+            <li>Enhanced operational efficiency by modernizing deployment workflows.</li>
+          </ul>
+        </article>
+
+        <!-- Navigation Solutions -->
+        <article class="avoid-break article-stack">
+          <header class="flex justify-between items-baseline">
+            <div>
+              <h3 class="font-medium leading-tight">Navigation Solutions</h3>
+              <p class="text-sm text-zinc-600">Software Engineer</p>
+            </div>
+            <div class="text-sm text-zinc-600">2013 – 2015</div>
+          </header>
+          <p class="text-[0.9rem] leading-6">
+            Developed automated test frameworks for in-vehicle GPS systems (Agilent Vee, C#), supported C/C++ debugging,
+            maintained Python data pipelines for POI packaging, and investigated routing issues to improve accuracy.
+          </p>
+        </article>
+
+        <!-- Education -->
+        <section class="avoid-break">
+          <h2 class="mt-2 text-sm font-semibold accent mb-2">Education</h2>
+          <div>
+            <p class="text-[0.93rem] font-medium">Lawrence Technological University</p>
+            <p class="text-[0.93rem] text-zinc-700">B.S. Computer Engineering</p>
+            <p class="text-[0.86rem] text-zinc-600">2011–2016 · Southfield, MI</p>
+            <p class="text-[0.86rem] text-zinc-700 mt-1">Formula Hybrid (Electrical Lead); Tau Beta Pi Treasurer</p>
+          </div>
+        </section>
       </div>
     </section>
 
