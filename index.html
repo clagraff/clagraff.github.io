@@ -13,13 +13,15 @@
       .avoid-break { break-inside: avoid; }
     }
     .accent { color: #e91d63; }
+
+    /* Consistent spacing inside each article */
     .article-stack > * { margin: 0; }
     .article-stack > * + * { margin-top: 0.5rem; }
   </style>
 </head>
 <body class="bg-white text-zinc-900 antialiased">
   <main class="mx-auto max-w-5xl p-6">
-    <!-- Header -->
+    <!-- Header (with compact inline summary) -->
     <header class="flex items-start justify-between border-b border-zinc-200 pb-2">
       <div class="max-w-xl">
         <h1 class="text-2xl font-semibold leading-tight">Curtis La Graff</h1>
@@ -32,11 +34,11 @@
         <li><a href="tel:+15176722224">+1 (517) 672-2224</a></li>
         <li><a href="mailto:curtis@lagraff.me">curtis@lagraff.me</a></li>
         <li>Pinckney, MI</li>
-        <li><a href="https://www.lagraff.me" target="_blank">www.lagraff.me</a></li>
+        <li><a href="https://www.lagraff.me" target="_blank" rel="noopener">www.lagraff.me</a></li>
       </ul>
     </header>
 
-    <!-- Two-column layout -->
+    <!-- Two-column layout: slim sidebar (2/12) + wide main (10/12) -->
     <section class="mt-4 grid grid-cols-12 gap-6">
       <!-- Sidebar -->
       <aside class="col-span-12 md:col-span-2 space-y-4">
@@ -57,7 +59,7 @@
         </section>
       </aside>
 
-      <!-- Main -->
+      <!-- Main column -->
       <div class="col-span-12 md:col-span-10">
         <h2 class="text-sm font-semibold accent mb-2">Experience</h2>
         <div class="space-y-5">
@@ -72,15 +74,13 @@
               <div class="text-sm text-zinc-600">2021 – Present</div>
             </header>
             <p class="text-[0.9rem] leading-6">
-              Led consulting projects delivering inventory platforms in the maritime/dealership space,
-              including C#/.NET management systems, Blazor interfaces, ETL integrations, and Azure-hosted services.
+              Lead consulting builds of inventory platforms for maritime/dealership clients, covering C#/.NET services, Blazor WebAssembly UIs,
+              third-party ETL integrations, and Azure deployments for day-to-day operations.
             </p>
             <ul class="list-disc pl-5 text-[0.88rem] leading-6">
-              <li>Built APIs with local caching and async sync to support offline and low-bandwidth environments.</li>
-              <li>Integrated third-party inventory feeds through custom ETL pipelines.</li>
-              <li>Automated CI/CD pipelines to improve release speed and reliability.</li>
-              <li>Managed Azure resources (WebApps, Functions, Storage, Search) with Bicep and PowerShell.</li>
-              <li>Designed and maintained data storage using SQL Server, Redis, and Azure Data Lake.</li>
+              <li>Built APIs with local caching and async sync to work in offline/low-bandwidth settings.</li>
+              <li>Integrated external inventory feeds via custom ETL pipelines and data quality checks.</li>
+              <li>Managed Azure resources (WebApps, Functions, Storage, Search) and automated CI/CD.</li>
             </ul>
           </article>
 
@@ -94,15 +94,13 @@
               <div class="text-sm text-zinc-600">2018 – 2021</div>
             </header>
             <p class="text-[0.9rem] leading-6">
-              Consulted on financial and automotive platforms, developing Java/Spring Boot APIs and React components,
-              and supporting major product launches with SRE responsibilities.
+              Built Java/Spring Boot APIs and React features for large financial and automotive programs, and supported high-visibility launches
+              as part of on-call/SRE rotations.
             </p>
             <ul class="list-disc pl-5 text-[0.88rem] leading-6">
-              <li>Implemented services for vehicle configuration and compliance data.</li>
-              <li>Integrated global emissions data into vehicle configuration services.</li>
-              <li>Contributed backend services for a high-profile EV launch used by marketing and sales tools.</li>
-              <li>Set up Splunk/Dynatrace dashboards for multiple teams and resolved production incidents.</li>
-              <li>Participated in paired programming, design discussions, and cross-team coordination.</li>
+              <li>Delivered services for vehicle configuration and compliance/emissions data.</li>
+              <li>Created Splunk/Dynatrace dashboards and handled global production incidents.</li>
+              <li>Collaborated across teams through pairing, design reviews, and release planning.</li>
             </ul>
           </article>
 
@@ -116,14 +114,13 @@
               <div class="text-sm text-zinc-600">2015 – 2018</div>
             </header>
             <p class="text-[0.9rem] leading-6">
-              Worked on furniture retail data systems, building ETL pipelines and customer-facing portals.
+              Worked on furniture retail data systems: ETL for manufacturer feeds, retailer portals, and a shift from script-based EC2 deploys
+              to containerized/serverless AWS workflows.
             </p>
             <ul class="list-disc pl-5 text-[0.88rem] leading-6">
-              <li>Designed Python/Golang APIs to ingest manufacturer inventory and publish to vendors.</li>
-              <li>Developed Angular/Typescript portals for retailers to manage and update product data.</li>
-              <li>Migrated deployments from EC2+Fabric to containerized/serverless AWS workflows.</li>
-              <li>Helped design asynchronous ETL pipelines with Python tools (Luigi, Celery).</li>
-              <li>Collaborated with product and design teams to refine retailer workflows.</li>
+              <li>Designed Python/Golang APIs to ingest, normalize, and publish inventory to vendors.</li>
+              <li>Built Angular/TypeScript portals for retailers to manage and publish product data.</li>
+              <li>Migrated deployments from EC2/Fabric to Docker-based and serverless setups in AWS.</li>
             </ul>
           </article>
 
@@ -137,14 +134,12 @@
               <div class="text-sm text-zinc-600">2013 – 2015</div>
             </header>
             <p class="text-[0.9rem] leading-6">
-              Supported development and testing of GPS software used in rental fleets.
+              Supported development and testing of GPS software for rental fleets, spanning automation, data packaging, and field issue triage.
             </p>
             <ul class="list-disc pl-5 text-[0.88rem] leading-6">
-              <li>Automated hardware/software tests using Agilent Vee and C#.</li>
-              <li>Assisted in debugging C/C++ navigation code for routing and display issues.</li>
-              <li>Maintained Python pipelines for packaging Points of Interest (POIs) into device binaries.</li>
-              <li>Supported CI/CD pipelines for distributing updated navigation data.</li>
-              <li>Investigated and reproduced field-reported routing discrepancies.</li>
+              <li>Automated functional tests with Agilent Vee and C#; maintained POI packaging pipelines in Python.</li>
+              <li>Debugged C/C++ navigation code and investigated routing issues from field reports.</li>
+              <li>Contributed to CI/CD jobs for distributing updated map and POI data to devices.</li>
             </ul>
           </article>
 
